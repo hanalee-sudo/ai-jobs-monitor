@@ -1,0 +1,128 @@
+# ============================================================
+# 데이터 소스 설정 파일 (AI와 일자리 모니터링)
+# 키워드/URL을 자유롭게 추가·수정·삭제할 수 있습니다.
+# ============================================================
+
+rss_feeds:
+  # --- 글로벌 컨설팅펌 (6개) ---
+  consulting:
+    - name: "McKinsey Insights"
+      url: "https://www.mckinsey.com/insights/rss"
+      category: "AI/기술"
+      language: "en"
+    - name: "BCG Publications"
+      url: "https://news.google.com/rss/search?q=site:bcg.com+AI&hl=en-US&gl=US&ceid=US:en"
+      category: "AI/기술"
+      language: "en"
+    - name: "Deloitte Insights"
+      url: "https://news.google.com/rss/search?q=site:deloitte.com+AI&hl=en-US&gl=US&ceid=US:en"
+      category: "AI/기술"
+      language: "en"
+    - name: "Accenture Insights"
+      url: "https://news.google.com/rss/search?q=site:accenture.com+AI&hl=en-US&gl=US&ceid=US:en"
+      category: "AI/기술"
+      language: "en"
+    - name: "PwC Insights"
+      url: "https://news.google.com/rss/search?q=site:pwc.com+AI&hl=en-US&gl=US&ceid=US:en"
+      category: "AI/기술"
+      language: "en"
+    - name: "EY Insights"
+      url: "https://news.google.com/rss/search?q=site:ey.com+AI&hl=en-US&gl=US&ceid=US:en"
+      category: "AI/기술"
+      language: "en"
+
+  # --- 글로벌 테크 매체 (3개) ---
+  tech_media:
+    - name: "TechCrunch AI"
+      url: "https://techcrunch.com/category/artificial-intelligence/feed/"
+      category: "AI/기술"
+      language: "en"
+    - name: "MIT Technology Review"
+      url: "https://www.technologyreview.com/feed/"
+      category: "AI/기술"
+      language: "en"
+    - name: "Wired"
+      url: "https://www.wired.com/feed/rss"
+      category: "AI/기술"
+      language: "en"
+
+  # --- 글로벌 주요 언론사 (3개) ---
+  global_news:
+    - name: "New York Times"
+      url: "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
+      category: "경제/비즈니스"
+      language: "en"
+    - name: "Reuters"
+      url: "https://news.google.com/rss/search?q=site:reuters.com+AI+jobs&hl=en-US&gl=US&ceid=US:en"
+      category: "경제/비즈니스"
+      language: "en"
+    - name: "BBC News Technology"
+      url: "https://feeds.bbci.co.uk/news/technology/rss.xml"
+      category: "경제/비즈니스"
+      language: "en"
+
+  # --- 국제기구 & 연구기관 (3개) ---
+  research:
+    - name: "Brookings Institution"
+      url: "https://news.google.com/rss/search?q=site:brookings.edu+AI&hl=en-US&gl=US&ceid=US:en"
+      category: "연구/정책"
+      language: "en"
+    - name: "Stanford HAI"
+      url: "https://news.google.com/rss/search?q=site:hai.stanford.edu&hl=en-US&gl=US&ceid=US:en"
+      category: "연구/정책"
+      language: "en"
+    - name: "OECD"
+      url: "https://news.google.com/rss/search?q=site:oecd.org+AI&hl=en-US&gl=US&ceid=US:en"
+      category: "연구/정책"
+      language: "en"
+
+  # --- 미국/EU 정부 (2개) ---
+  intl_government:
+    - name: "White House"
+      url: "https://news.google.com/rss/search?q=site:whitehouse.gov+AI&hl=en-US&gl=US&ceid=US:en"
+      category: "정부정책"
+      language: "en"
+    - name: "EU Digital Strategy"
+      url: "https://digital-strategy.ec.europa.eu/en/rss.xml"
+      category: "정부정책"
+      language: "en"
+
+  # --- 한국 정부 (3개) ---
+  kr_government:
+    - name: "고용노동부"
+      url: "https://news.google.com/rss/search?q=site:moel.go.kr&hl=ko&gl=KR&ceid=KR:ko"
+      category: "정부정책"
+      language: "ko"
+    - name: "과학기술정보통신부"
+      url: "https://www.msit.go.kr/user/rss/rss.do?bbsSeqNo=94"
+      category: "정부정책"
+      language: "ko"
+    - name: "대한민국 정책브리핑"
+      url: "https://news.google.com/rss/search?q=site:korea.kr+AI&hl=ko&gl=KR&ceid=KR:ko"
+      category: "정부정책"
+      language: "ko"
+
+  # --- 한국 매체 (4개) ---
+  kr_media:
+    - name: "AI타임스"
+      url: "https://www.aitimes.com/rss/allArticle.xml"
+      category: "AI/기술"
+      language: "ko"
+    - name: "연합뉴스"
+      url: "https://en.yna.co.kr/RSS/news.xml"
+      category: "경제/비즈니스"
+      language: "en"
+    - name: "한국경제"
+      url: "https://www.hankyung.com/feed/all-news"
+      category: "경제/비즈니스"
+      language: "ko"
+    - name: "매일경제"
+      url: "https://www.mk.co.kr/rss/30000001/"
+      category: "경제/비즈니스"
+      language: "ko"
+
+# --- 수집 설정 ---
+collection:
+  days_back: 7         # RSS 피드도 최근 N일 이내만
+  request_delay: 1.0   # 요청 간 대기 시간 (초)
+  request_timeout: 15  # 요청 타임아웃 (초)
