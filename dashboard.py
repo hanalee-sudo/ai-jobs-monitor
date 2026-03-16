@@ -1,7 +1,10 @@
 """Streamlit 웹 대시보드: 토픽 기반 리포트 조회."""
 
 import asyncio
-asyncio.set_event_loop(asyncio.new_event_loop())
+try:
+    asyncio.get_event_loop()
+except RuntimeError:
+    asyncio.set_event_loop(asyncio.new_event_loop())
 
 import sys
 from pathlib import Path
