@@ -24,7 +24,10 @@ st.set_page_config(
 )
 
 # --- 비밀번호 보호 ---
-DASHBOARD_PASSWORD = st.secrets.get("DASHBOARD_PASSWORD", "wantedlab2026")
+try:
+    DASHBOARD_PASSWORD = st.secrets["DASHBOARD_PASSWORD"]
+except (KeyError, FileNotFoundError):
+    DASHBOARD_PASSWORD = "wantedlab2026"
 
 
 def _check_password() -> bool:
